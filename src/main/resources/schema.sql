@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS alunos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    matricula VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS notas (
+    id SERIAL PRIMARY KEY,
+    aluno_id BIGINT NOT NULL,
+    disciplina VARCHAR(255) NOT NULL,
+    nota DOUBLE PRECISION NOT NULL,
+    FOREIGN KEY (aluno_id) REFERENCES alunos(id)
+);
