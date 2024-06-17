@@ -8,11 +8,11 @@
 		<version>2.5.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bezkoder</groupId>
-	<artifactId>spring-boot-jdbctemplate-postgresql</artifactId>
+	<groupId>com.bancodedados</groupId>
+	<artifactId>spring-banco-de-dados_ucsal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-jdbctemplate-postgresql</name>
-	<description>Spring Boot JDBCTemplate CRUD example with PostgreSQL Database - Rest API</description>
+	<name>spring-banco-de-dados_ucsal</name>
+	<description>Spring Boot Jdbc Atividade Banco de dados - Rest API</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
