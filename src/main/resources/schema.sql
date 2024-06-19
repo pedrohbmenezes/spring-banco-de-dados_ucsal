@@ -13,3 +13,19 @@ CREATE TABLE IF NOT EXISTS notas (
     nota DOUBLE PRECISION NOT NULL,
     FOREIGN KEY (aluno_id) REFERENCES alunos(id)
 );
+
+CREATE OR REPLACE VIEW aluno_notas_view AS
+SELECT 
+    n.id AS nota_id,
+    n.aluno_id,
+    n.disciplina,
+    n.nota,
+    a.nome AS aluno_nome,
+    a.email AS aluno_email,
+    a.matricula AS aluno_matricula
+FROM 
+    notas n
+JOIN 
+    alunos a ON n.aluno_id = a.id;
+
+
