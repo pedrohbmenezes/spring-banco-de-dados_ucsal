@@ -42,6 +42,5 @@ public class InitData implements CommandLineRunner {
         alunoRepository.save(aluno1);
         alunoRepository.save(aluno2);
 
-        System.out.println("Dados fictícios de notas e alunos inseridos com sucesso!");
     }
 }

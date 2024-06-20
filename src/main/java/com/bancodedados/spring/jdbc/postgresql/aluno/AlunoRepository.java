@@ -51,19 +51,6 @@ public class AlunoRepository implements GenericRepository<AlunoEntity> {
     }
 
     @Override
-    public List<AlunoEntity> findByPublished(boolean published) {
-        return jdbcTemplate.query("SELECT * from alunos WHERE published=?",
-                BeanPropertyRowMapper.newInstance(AlunoEntity.class), published);
-    }
-
-    @Override
-    public List<AlunoEntity> findByTitleContaining(String title) {
-        String q = "SELECT * from alunos WHERE nome ILIKE '%" + title + "%'";
-
-        return jdbcTemplate.query(q, BeanPropertyRowMapper.newInstance(AlunoEntity.class));
-    }
-
-    @Override
     public int deleteAll() {
         return jdbcTemplate.update("DELETE from alunos");
     }

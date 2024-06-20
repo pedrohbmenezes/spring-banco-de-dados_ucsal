@@ -54,18 +54,6 @@ public class NotaRepository implements GenericRepository<NotaEntity> {
     }
 
     @Override
-    public List<NotaEntity> findByPublished(boolean published) {
-        // Implementação opcional, dependendo do seu caso de uso
-        return null;
-    }
-
-    @Override
-    public List<NotaEntity> findByTitleContaining(String title) {
-        // Implementação opcional, dependendo do seu caso de uso
-        return null;
-    }
-
-    @Override
     public int deleteAll() {
         return jdbcTemplate.update("DELETE FROM notas");
     }
@@ -80,8 +68,6 @@ public class NotaRepository implements GenericRepository<NotaEntity> {
         return notas;
     }
 
-    // Método para obter uma nota específica com informações do aluno através de um
-    // JOIN
     public NotaDtoWithAluno findNotaWithAlunoById(Long id) {
         String sql = "SELECT n.id, n.aluno_id, n.disciplina, n.nota, " +
                 "a.nome as aluno_nome, a.email as aluno_email, a.matricula as aluno_matricula " +

@@ -13,9 +13,5 @@ public interface GenericRepository<T> {
 
   List<T> findAll();
 
-  List<T> findByPublished(boolean published);
-
-  List<T> findByTitleContaining(String title);
-
   int deleteAll();
 }
